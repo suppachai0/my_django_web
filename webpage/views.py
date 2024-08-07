@@ -7,9 +7,11 @@ def indexPage(request):
 def aboutUs(request):
     return render(request, 'about.html')
 
-
 def contactUs(request):
     return render(request, 'contact.html')
 
 def forPage(request):
-    return render(request, 'forPage.html')
+    context = {}
+    lt = list(range(0, 100))
+    context["list"] = lt 
+    return render(request, 'for_test.html', context)
