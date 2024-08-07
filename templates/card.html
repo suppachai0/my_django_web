@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+  <table>
+    <div class="card" style="width: 18rem">
+      <img
+        src="https://pbs.twimg.com/media/GTesO5WagAAdrO-?format=jpg&name=small"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+      </div>
+    </div>
+    {% for i in list %}
+    <div class="card" style="width: 18rem">
+      <img
+        src="https://pbs.twimg.com/media/GTesO5WagAAdrO-?format=jpg&name=small"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+      </div>
+    </div>
+
+    {% endfor %}
+  </table>
+</div>
+{% endblock content %}
