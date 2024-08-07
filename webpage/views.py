@@ -10,8 +10,4 @@ def aboutUs(request):
 def contactUs(request):
     return render(request, 'contact.html')
 
-def forPage(request):
-    context = {}
-    lt = list(range(0, 100))
-    context["list"] = lt 
-    return render(request, 'for_test.html', context)
+
