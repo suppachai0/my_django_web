@@ -21,3 +21,13 @@ def cardPage(request):
     lt = list(range(0, 100))
     context["list"] = lt
     return render(request, 'card.html', context)
+
+def cardcolorpage(request):
+    context = {
+        'color': 'all',
+    }
+
+    if request.method == "GET" and request.GET.get('color') is not None:
+        context['color'] = request.GET.get('color')
+
+    return render(request, 'card_color.html', context)
