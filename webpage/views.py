@@ -31,3 +31,17 @@ def cardcolorpage(request):
         context['color'] = request.GET.get('color')
 
     return render(request, 'card_color.html', context)
+
+def form(request):
+    email = ''
+    password = ''
+    context = {}
+
+    if request.method == "POST":  # แก้ไขการพิมพ์ผิดจาก emthod เป็น method
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+
+    context['email'] = email
+    context['password'] = password
+    
+    return render(request, 'form.html', context)  # เพิ่ม context ที่ส่งไปยัง template
